@@ -1,0 +1,24 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 5, in script
+    image ana happy = ""
+Exception: An empty string cannot be used as a displayable.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 5, in script
+    image ana happy = ""
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\ast.py", line 926, in execute
+    renpy.exports.image(self.imgname, img)
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\exports.py", line 341, in image
+    d = renpy.easy.displayable(d)
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\easy.py", line 117, in displayable
+    raise Exception("An empty string cannot be used as a displayable.")
+Exception: An empty string cannot be used as a displayable.
+
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.2.1.24030407
+O Dilema de Ana 1.0
+Wed Oct 23 20:44:50 2024

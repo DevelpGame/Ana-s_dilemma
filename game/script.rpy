@@ -1,41 +1,79 @@
-﻿# Definindo o script básico do Ren'Py
+﻿define ana = Character("Ana")
 
+image ana normal = "images/eileen happy.png"
+image ana happy = "images/eileen vhappy.png"
+image ana sad = "images/eileen concerned.png"
+
+# Definindo o jogo
 label start:
-    scene bg classroom
 
-    "Você é Ana, uma estudante do ensino médio que sempre se destacou em artes, mas enfrenta dificuldades em Matemática e Ciências. Com o semestre se aproximando do fim e o peso das notas pesando em seus ombros, você se sente pressionada a tomar uma decisão crucial."
+    # Tela de título
+    scene bg_main with fade:
+        zoom 2
+    "O Dilema de Ana"
+    
+    # Apresentação da situação
+    scene bg_lib with fade:
+        zoom 2
+    show ana normal at left
+    "Ana estava enfrentando dificuldades na escola, especialmente em Matemática e Ciências. Com o semestre se aproximando do fim, ela precisava decidir como melhorar suas notas."
 
-    "O que você decide fazer?"
+    # Introdução à decisão
+    "Você é Ana. O que você decide fazer?"
 
+    # Opções para o jogador
     menu:
         "Focar apenas em Matemática":
-            jump foco_matematica
-        
+            jump matematica_focus
+
         "Estudar Ciências e Matemática em paralelo":
-            jump estudo_paralelo
+            jump balanced_focus
 
-label foco_matematica:
-    scene bg study_room
-
-    "Ana acredita que dominar Matemática é sua única chance de recuperação. Ela mergulha em livros, assiste a vídeos tutoriais e dedica horas resolvendo exercícios. As aulas de Ciências, antes interessantes, são esquecidas."
+# Resultado da escolha de focar apenas em Matemática
+label matematica_focus:
+    scene bg_lib with fade:
+        zoom 2
+    show ana sad at left
+    "Ana decide que precisa dominar Matemática. Ela estuda sozinha, passa horas resolvendo exercícios e ignora as aulas de Ciências."
+    "No dia da prova de Matemática, ela se sente preparada, mas quando recebe a prova, percebe que não entendeu alguns conceitos-chave."
+    "Ela acaba tirando uma nota baixa e fica frustrada por ter deixado Ciências de lado."
     
-    "No dia da prova de Matemática, seu coração bate acelerado. A confiança a acompanha, mas ao olhar para as questões, uma onda de insegurança a atinge. Conceitos-chave que ignorou a deixam confusa."
+    # Exibir o resultado
+    scene bg_math with fade:
+        zoom 2
+    show ana sad at left
+    "Você se sente desanimada e percebe que não conseguiu melhorar em nenhuma das disciplinas."
+    "O peso da frustração é enorme. Será que você fez a escolha certa?"
 
-    "Ela sai da prova desmotivada, com uma nota baixa em mãos. A frustração se transforma em uma reflexão amarga: 'E se eu tivesse estudado Ciências também?'"
+    # Encaminhamento para final ou reinício
+    menu:
+        "Recomeçar?":
+            jump start
+        "Finalizar":
+            return
 
-    "Resultado: Frustração em Matemática."
-    "Você percebe que o esforço concentrado não trouxe os resultados esperados e que ignorar as outras disciplinas a deixou ainda mais ansiosa."
+# Resultado da escolha de estudar ambas as disciplinas
+label balanced_focus:
+    scene bg_lib with fade:
+        zoom 2
+    show ana happy at left
+    "Ana decide que vai se concentrar em ambas as matérias. Ela cria um cronograma onde estuda Matemática em um dia e Ciências no outro, participando de grupos de estudo para as duas."
+    "Com essa abordagem, ela começa a entender melhor os conceitos e se sente mais confiante."
 
-    return
-
-label estudo_paralelo:
-    scene bg study_group
-
-    "Ana decide que, em vez de escolher, ela pode encontrar um equilíbrio. Ela cria um cronograma de estudos, dedicando dias alternados para Matemática e Ciências, e se junta a grupos de estudo."
+    scene bg_classroom at center with fade:
+        zoom 2
+    "No dia das provas, Ana se sente tranquila e preparada para ambas as disciplinas."
     
-    "A interação com colegas e a troca de ideias a fazem enxergar as matérias de forma mais clara. Aos poucos, os conceitos se tornam mais fáceis de entender, e sua confiança cresce."
+    # Exibir o resultado
+    scene bg_classroom at center with fade:
+        zoom 2
+    show ana happy at left
+    "Você vê suas notas subirem e se sente realizada, sabendo que sua decisão foi a melhor."
+    "O equilíbrio trouxe o sucesso que você esperava."
 
-    "Resultado: Sucesso nas duas disciplinas!"
-    "As notas começam a subir, e Ana sente uma realização única. Ela percebe que, com esforço e planejamento, consegue equilibrar suas paixões e responsabilidades."
-
-    return
+    # Encaminhamento para final ou reinício
+    menu:
+        "Recomeçar?":
+            jump start
+        "Finalizar":
+            return

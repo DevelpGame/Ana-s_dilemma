@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 63: expected 'simple_expression' not found.
+    scene bg_classroom at with fade:
+                          ^
+
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Wed Oct 23 20:47:50 2024
