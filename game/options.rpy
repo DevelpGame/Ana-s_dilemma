@@ -12,7 +12,7 @@
 ##
 ## O _() ao redor da string a marca como elegível para tradução.
 
-define config.name = _("O Dilema de Ana")
+define config.name = _("O Dilema de Ana ")
 
 
 ## Determina se o título fornecido acima será mostrado na tela do menu
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## construída. Ele deve ser somente ASCII e não deve conter espaços, dois pontos
 ## ou ponto e vírgula.
 
-define build.name = "ODilemadeAna"
+define build.name = "O_Dilema_de_Ana"
 
 
 ## Sons e música ###############################################################
