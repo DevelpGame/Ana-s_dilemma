@@ -22,5 +22,3 @@ História Incrementada:
 
 	Agora, cabe a você decidir o destino de Ana.
 
-PRECISO:
-	Sprites: Ana deve ter expressões de felicidade, frustração e cansaço para as diferentes cenas.
