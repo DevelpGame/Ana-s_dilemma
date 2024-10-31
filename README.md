@@ -1,5 +1,24 @@
 # Como instalar
 
+## Computador
+
+1. Abra o link no seu navegador, e selecione o arquivo .zip
+   ![Foto](/imgs/pc_01.jpg)
+
+2. Clique co no botão "Baixar"
+   ![foto](/imgs/pc_02.jpg)
+
+3. Extraia os arquivos da pasta baixada
+   ![foto](/imgs/pc_03.jpg)
+   ![foto](/imgs/pc_04.jpg)
+
+4. Acesse a pasta recém extraida e execute o aplicativo
+   ![foto](/imgs/pc_05.jpg)
+
+5. Seja Feliz Jogando
+   ![foto](/imgs/pc_06.jpg)
+
+
 ## Smartphone
 
 1. Abra o link do jogo no seu navegador
