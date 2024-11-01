@@ -1,58 +1,67 @@
-# Como instalar
+# O Dilema de Ana
 
-## Computador
+O Dilema de Ana é um jogo de narrativa interativa desenvolvido em Ren'Py com o objetivo de ensinar a Teoria das Restrições para Educação (T.O.C.f.E) de forma prática e envolvente. O jogo permite que o jogador explore decisões acadêmicas e veja como escolhas diferentes impactam o aprendizado, proporcionando uma experiência direta dos conceitos da T.O.C.f.E.
 
-1. Abra o link no seu navegador, e selecione o arquivo .zip
-   ![Foto](/imgs/pc_01.jpg)
+## Índice
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Objetivo Pedagógico](#objetivo-pedagogico)
+- [Como Instalar e Jogar](#como-instalar-e-jogar)
+  - [Computador](#computador)
+  - [Smartphone](#smartphone)
 
-2. Clique co no botão "Baixar"
-   ![foto](/imgs/pc_02.jpg)
+## Sobre o Projeto
 
-3. Extraia os arquivos da pasta baixada
-   ![foto](/imgs/pc_03.jpg)
-   ![foto](/imgs/pc_04.jpg)
+A Teoria das Restrições para Educação (T.O.C.f.E) busca aprimorar o desempenho acadêmico dos estudantes, focando em identificar e superar restrições que dificultam o aprendizado. Em "O Dilema de Ana", o jogador acompanha a personagem Ana, uma estudante que enfrenta dificuldades em Matemática e Ciências. Através de decisões sobre como ela organiza seu tempo e recursos, o jogador explora na prática como o equilíbrio pode ajudar a resolver restrições no aprendizado.
 
-4. Acesse a pasta recém extraida e execute o aplicativo
-   ![foto](/imgs/pc_05.jpg)
+## Objetivo Pedagógico
 
-5. Seja Feliz Jogando
-   ![foto](/imgs/pc_06.jpg)
+Este jogo utiliza os princípios da T.O.C.f.E para mostrar como decisões estratégicas e o entendimento de restrições (como as limitações de tempo e foco de Ana) podem influenciar o desempenho acadêmico. O jogador percebe que um foco exclusivo pode não ser suficiente para superar desafios em disciplinas complexas e que, muitas vezes, o equilíbrio é a chave para obter melhores resultados.
 
+## Como instalar e jogar
 
-## Smartphone
+### Computador
 
-1. Abra o link do jogo no seu navegador
+1. Abra o link no navegador e selecione o arquivo `.zip`.  
+   <img src="/imgs/pc_01.jpg" width="500">
 
-   ![Foto do link no navegador](/imgs/01.jpg)
+2. Clique no botão "Baixar".  
+   <img src="/imgs/pc_02.jpg" width="500">
 
-2. Selecione o arquivo **.APK**
+3. Extraia os arquivos da pasta baixada.  
+   <img src="/imgs/pc_03.jpg" width="500">
+   <img src="/imgs/pc_04.jpg" width="500">
 
-   ![Foto dos arquivos no github](/imgs/03.jpg)
+4. Acesse a pasta recém extraída e execute o aplicativo.  
+   <img src="/imgs/pc_05.jpg" width="500">
 
-3. Pressione os três botões e aperte em 'Download'
+5. Aproveite o jogo!  
+   <img src="/imgs/pc_06.jpg" width="500">
 
-      ![Foto do download](/imgs/04.jpg)
+### Smartphone
 
-4. Autorize o download, caso necessário.
+1. Abra o link do jogo no navegador.  
+   <img src="/imgs/01.jpg" width="300">
 
-   ![Foto da confirmação do download](/imgs/05.jpg)
+2. Selecione o arquivo `.APK`.  
+   <img src="/imgs/03.jpg" width="300">
 
-5. Na área de notificações, acompanhe o processo de download e quando o arquivo estiver baixado, pressione para realizar a instalação
+3. Pressione os três pontos e clique em "Download".  
+   <img src="/imgs/04.jpg" width="300">
 
-   ![Imagem do WhatsApp de 2024-10-30 à(s) 19.59.21_3db31f93](/imgs/06.jpg)
+4. Autorize o download, caso necessário.  
+   <img src="/imgs/05.jpg" width="300">
 
-6. Caso apareça a opção, selecione a opção 'Instalador do pacote'
+5. Na área de notificações, acompanhe o download. Quando o arquivo estiver baixado, toque para realizar a instalação.  
+   <img src="/imgs/06.jpg" width="300">
 
-      ![Foto do instalador do pacote](/imgs/07.jpg)
+6. Se necessário, selecione a opção "Instalador do pacote".  
+   <img src="/imgs/07.jpg" width="300">
 
-7. Confirme a instalação do jogo
+7. Confirme a instalação do jogo.  
+   <img src="/imgs/08.jpg" width="300">
 
-      ![Foto da instalação do jogo](/imgs/08.jpg)
+8. Encontre o jogo em sua lista de aplicativos.  
+   <img src="/imgs/09.jpg" width="300">
 
-8. Encontre o jogo
-
-   ![Foto do jogo](/imgs/09.jpg)
-
-9. Seja feliz jogando
-
-      ![Foto do Jogo aberto](/imgs/10.jpg)
+9. Divirta-se jogando!  
+   <img src="/imgs/10.jpg" width="300">
