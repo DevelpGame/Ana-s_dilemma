@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 20: add expects a non-empty block.
-    add gui.main_menu_background:
-                                 ^
+File "game/script.rpy", line 30: expected 'label_name' not found.
+    jump 
+        ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sat Oct 26 15:26:10 2024
+Wed Nov 13 10:33:45 2024
