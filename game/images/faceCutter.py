@@ -1,14 +1,14 @@
 from PIL import Image
 
 # Carregar a imagem (substitua o caminho pela localização do seu arquivo de imagem)
-img_path = './chars/michael/michael.png'
+img_path = 'game/images/chars/julia/julia_sad.png'
 img = Image.open(img_path)
 
 # Dimensões da imagem
 img_width, img_height = img.size
 
-# Número de rostos na imagem (ajuste conforme necessário)
-num_faces = 4
+# Número de rostos na imagem (ajuste conforme necessário) ## 1 para cortar a altura
+num_faces = 1
 
 # Calcula a largura de cada rosto
 face_width = img_width // num_faces
@@ -21,12 +21,12 @@ for i in range(num_faces):
     # Define a área de corte para cada rosto
     left = i * face_width
     right = left + face_width
-    face_img = img.crop((left, 0, right, img_height))  # Corta a imagem
+    face_img = img.crop((left, 0, right, (img_height// 2 )))  # Corta a imagem
     
     # Adiciona o rosto cortado à lista
     face_images.append(face_img)
     
     # Salva o rosto como imagem separada
-    face_img.save(f'michael_{i + 1}.png')
+    face_img.save(f'game/images/chars/julia/julia_{i + 1}.png')
 
 print("Rostos separados e salvos com sucesso!")

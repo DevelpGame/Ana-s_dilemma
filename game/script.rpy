@@ -2,15 +2,18 @@
 
 define ana = Character("Ana")
 define michael = Character("Michael")
+define julia = Character("Júlia")
 
 # Personagens
-image ana normal = "images/chars/eileen/eileen happy.png"
-image ana happy = "images/chars/eileen/eileen vhappy.png"
-image ana sad = "images/chars/eileen/eileen concerned.png"
+image ana normal = "images/chars/ana/ana happy.png"
+image ana happy = "images/chars/ana/ana vhappy.png"
+image ana sad = "images/chars/ana/ana concerned.png"
 
 image michael normal = "images/chars/michael/michael_talking.png"
 image michael happy = "images/chars/michael/michael_happy.png"
 image michael sad = "images/chars/michael/michael_thinking.png"
+
+image julia normal = "images/chars/julia/julia_happy.png"
 
 # Fundos
 image math = "images/backgrounds/bg_math.jpg"
@@ -19,9 +22,8 @@ image classroom = "images/backgrounds/bg_classroom.jpg"
 
 label start:
     play music "audio/music/9th_Symphony.mp3"
-    
-    "Escolha a história desejada: "
-        # Opções para o jogador
+
+    "Escolha a história desejada:"
     menu:
         "O Dilema de Ana":
             jump anas_dilemma
@@ -30,77 +32,63 @@ label start:
             jump anas_dilemma
 
 label anas_dilemma:
-    # Tela de título
-    "Boas Vindas ao jogo 'O Dilema de Ana'"
-
-    # Apresentação da situação
-    scene lib with fade:
-        zoom 2
-    show ana normal at left
+    # Introdução à história principal
+    scene lib with fade
     with dissolve
-    "Ana estava enfrentando dificuldades na escola, especialmente em Matemática e Ciências. Com o semestre se aproximando do fim, ela precisava decidir como melhorar suas notas."
-
-    # Introdução à decisão
-    "Você é Ana. O que você decide fazer?"
+    narrator "Ana estava preocupada. Matemática e Ciências estavam puxadas, e as provas finais chegavam cada vez mais perto."
+    narrator "Ela sabia que precisava melhorar suas notas, mas não sabia por onde começar."
+    
+    # Novo evento: Visita de Júlia
+    show ana normal at left
+    show julia normal at right
+    with fade
+    julia "Oi, Ana! Está ocupada?"
+    ana "Oi, Júlia! Meio que sim... Estou tentando organizar meus estudos."
+    julia "Tenho uma novidade incrível! Consegui ingressos para o show da Roberta Machado no fim de semana. São passes VIP com acesso ao backstage!"
+    julia "O que acha de irmos juntas?"
 
     # Opções para o jogador
     menu:
-        "Focar apenas em Matemática":
-            jump matematica_focus
+        "Aceitar o convite de Júlia e ir ao evento":
+            jump accept_invitation
+        "Recusar o convite para focar nos estudos":
+            jump decline_invitation
 
-        "Estudar Ciências e Matemática em paralelo":
-            jump balanced_focus
-
-# Resultado da escolha de focar apenas em Matemática
-label matematica_focus:
-    scene lib with fade:
-        zoom 2
+# Cena de aceitar o convite
+label accept_invitation:
+    scene event with fade
+    show ana happy at left
+    show julia happy at right
+    ana "Uau! Isso é demais! Claro que vou!"
+    "Ana decide ir ao evento com Júlia. Elas aproveitam o fim de semana inteiro, curtindo o show e as atividades."
+    scene lib with fade
     show ana sad at left
-    "Ana decide que vai focar em Matemática, pois acredita que dominar essa matéria é o suficiente para se sair bem na escola. Ela estuda sozinha, passa horas resolvendo exercícios e ignora as aulas de Ciências."
-    "No dia da prova de Matemática, ela se sente preparada, mas ao começar a prova, percebe que faltam alguns conceitos importantes que ela não entendeu completamente."
-    "Apesar do esforço, Ana tira uma nota abaixo do esperado e fica frustrada por ter negligenciado Ciências."
+    narrator "Ao voltar para casa, Ana percebe que perdeu um tempo precioso para estudar. Suas notas acabam sofrendo com isso."
+    narrator "Apesar de se divertir, ela sente que a escolha trouxe mais consequências do que esperava."
 
-    # Exibir o resultado
-    scene math with fade:
-        zoom 2
-    show ana sad at left
-    "Você percebe que focar apenas em Matemática não foi o ideal. Não conseguiu se destacar em nenhuma das disciplinas, e o sentimento de frustração é inevitável."
-    "Será que escolher estudar apenas o que gosta ou domina foi a decisão certa?"
-
-    # Encaminhamento para final ou reinício
     menu:
         "Recomeçar?":
             jump start
         "Finalizar":
             return
 
-# Resultado da escolha de estudar ambas as disciplinas
-label balanced_focus:
-    scene lib with fade:
-        zoom 2
+# Cena de recusar o convite
+label decline_invitation:
+    scene lib with fade
+    show ana sad at left
+    ana "Júlia, eu adoraria ir, mas tenho exames importantes chegando. Preciso focar nos estudos."
+    show julia normal at right
+    julia "Ah, que pena... Mas entendo. Boa sorte com os estudos!"
+    scene lib with fade
     show ana happy at left
-    "Ana decide se dedicar igualmente a Matemática e Ciências, mesmo sabendo que não domina ou não tem tanto gosto por uma das matérias. Ela monta um cronograma, estudando Matemática em um dia e Ciências no outro, e participa de grupos de estudo para ajudar na compreensão dos temas."
-    "Com essa abordagem equilibrada, Ana passa a entender melhor os conceitos e se sente mais segura."
+    narrator "Ana se dedica aos estudos durante o fim de semana. Embora sinta que perdeu uma chance de diversão, ela fica orgulhosa ao ver os resultados positivos nas provas."
 
-    scene classroom at center with fade:
-        zoom 2
-    "No dia das provas, Ana se sente preparada para ambas as disciplinas e encara os desafios com tranquilidade."
-
-    # Exibir o resultado
-    scene classroom at center with fade:
-        zoom 2
-    show ana happy at left
-    "Você vê suas notas melhorarem e sente a satisfação de ter tomado a melhor decisão. Dedicar-se a ambas as matérias, mesmo com as dificuldades, trouxe o sucesso e aprendizado que você esperava."
-    "O equilíbrio foi essencial para alcançar o objetivo de passar o ano letivo com confiança e segurança."
-
-    stop music
-
-    # Encaminhamento para final ou reinício
     menu:
         "Recomeçar?":
             jump start
         "Finalizar":
             return
+
 
 # História 2
 label overcoming_challenges_in_the_classroom:
@@ -108,7 +96,7 @@ label overcoming_challenges_in_the_classroom:
     scene classroom at center with dissolve:
         zoom 1.5
     narrator "Um novo professor chega à Escola Central, onde muitos alunos têm dificuldade em aprender."
-    
+
     # Reflexões do professor
     narrator "Você pensa: 'A sala está cheia de alunos, mas parece que eles estão desmotivados. Qual será a principal dificuldade deles?'"
 
@@ -165,7 +153,7 @@ label continuar_aulas_normais:
 label reflexao_final:
     scene teacher_desk with dissolve
     narrator "Ao refletir sobre o dia, você percebe o impacto de abordar ou ignorar o conflito central nas aulas."
-    
+
     narrator "Você pensa: 'Resolver o conflito fez uma diferença significativa no engajamento dos alunos.'"
 
     # Fim do jogo

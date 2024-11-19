@@ -1,53 +1,73 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 18, in script
-    "Boas Vindas ao jogo 'O Dilema de Ana'"
-  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 70, in _window_show
-    renpy.with_statement(trans)
-OSError: Couldn't find file 'audio/music/9th_Symphony.mp3'.
+While loading <renpy.display.im.Image object ('images/chars/julia/julia_happy.png') at 0x00000000051d8fa0>:
+  File "game/script.rpy", line 44, in script
+    with fade
+OSError: Couldn't find file 'images/chars/julia/julia_happy.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 18, in script
-    "Boas Vindas ao jogo 'O Dilema de Ana'"
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\ast.py", line 585, in execute
-    statement_name("say")
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\ast.py", line 52, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 70, in _window_show
-    renpy.with_statement(trans)
+  File "game/script.rpy", line 44, in script
+    with fade
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\ast.py", line 1363, in execute
+    renpy.exports.with_statement(trans, paired=paired)
   File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\exports.py", line 1781, in with_statement
     return renpy.game.interface.do_with(trans, paired, clear=clear)
   File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\core.py", line 1548, in do_with
     return self.interact(trans_pause=True,
   File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\core.py", line 3022, in interact_core
-    renpy.audio.audio.periodic()
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\audio\audio.py", line 1205, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\audio\audio.py", line 1183, in periodic_thread_main
-    periodic_pass()
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\audio\audio.py", line 1125, in periodic_pass
-    c.periodic()
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\audio\audio.py", line 534, in periodic
-    topf = load(filename)
-  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\audio\audio.py", line 72, in load
-    rv = renpy.loader.load(fn, directory="audio")
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\core.py", line 2818, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\core.py", line 1352, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\transition.py", line 194, in render
+    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\transition.py", line 384, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\transform.py", line 957, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 978, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 413, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\image.py", line 513, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\image.py", line 316, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\im.py", line 626, in render
+    return cache.get(self, render=True)
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\im.py", line 309, in get
+    surf = image.load()
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\im.py", line 761, in load
+    raise e
+  File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\display\im.py", line 711, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
   File "D:\Games\_RENPY\renpy-8.2.1-sdk\renpy\loader.py", line 672, in load
     raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'audio/music/9th_Symphony.mp3'.
+OSError: Couldn't find file 'images/chars/julia/julia_happy.png'.
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.2.1.24030407
 O Dilema de Ana  1.0
-Wed Nov  6 19:37:31 2024
+Sun Nov 17 22:54:47 2024
