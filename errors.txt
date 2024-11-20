@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 55: end of line expected.
-    with fade:
-             ^
+File "game/script.rpy", line 38: expected statement.
+    "O Dilema de Ana":
+                     ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Wed Nov 20 00:44:50 2024
+Wed Nov 20 18:57:16 2024

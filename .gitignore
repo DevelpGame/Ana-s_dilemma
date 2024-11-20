@@ -164,3 +164,7 @@ cython_debug/
 /game/saves/*
 /game/cache/*
 /game/images/.ignore/_ana/*
+
+game/saves/*
+errors.txt
+log.txt

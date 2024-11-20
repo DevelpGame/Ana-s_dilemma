@@ -33,13 +33,13 @@ image classroom = "images/backgrounds/bg_classroom.jpg"
 label start:
     play music "audio/music/9th_Symphony.mp3"
 
-    "Escolha a história desejada:"
-    menu:
-        "O Dilema de Ana":
-            jump anas_dilemma
+    # "Escolha a história desejada:"
+    # menu:
+        #"O Dilema de Ana":
+    jump anas_dilemma
 
-        "Superando Desafios em Sala de Aula (Em construção)\nIniciando 'O dilema de Ana'":
-            jump anas_dilemma
+        # "Superando Desafios em Sala de Aula (Em construção)\nIniciando 'O dilema de Ana'":
+        #     jump overcoming_challenges_in_the_classroom
 
 label anas_dilemma:
     # Introdução à história principal
