@@ -1,19 +1,29 @@
 ﻿define gui.main_menu_background = "images/backgrounds/bg_main.jpg"
 
+# Configurando posições fixas
+define center_above = Position(xalign=1.0, yalign= 0.7)
+define left_above = Position(xalign=0.01, yalign=0.7)
+
 define ana = Character("Ana")
 define michael = Character("Michael")
 define julia = Character("Júlia")
 
 # Personagens
-image ana normal = "images/chars/ana/ana happy.png"
-image ana happy = "images/chars/ana/ana vhappy.png"
-image ana sad = "images/chars/ana/ana concerned.png"
+image ana normal = im.Scale("images/chars/ana/ana happy.png", 200, 200)
+image ana happy = im.Scale("images/chars/ana/ana vhappy.png", 200, 200)
+image ana sad = im.Scale("images/chars/ana/ana concerned.png", 200, 200)
+image ana inormal = im.Scale("images/chars/ana/i - ana happy.png", 200, 200)
+image ana ihappy = im.Scale("images/chars/ana/i - ana vhappy.png", 200, 200)
+image ana isad = im.Scale("images/chars/ana/i - ana concerned.png", 200, 200)
 
-image michael normal = "images/chars/michael/michael_talking.png"
-image michael happy = "images/chars/michael/michael_happy.png"
-image michael sad = "images/chars/michael/michael_thinking.png"
 
-image julia normal = "images/chars/julia/julia_happy.png"
+image michael normal = im.Scale("images/chars/michael/michael_talking.png", 200, 200)
+image michael happy = im.Scale("images/chars/michael/michael_happy.png", 200, 200)
+image michael sad = im.Scale("images/chars/michael/michael_thinking.png", 200, 200)
+
+image julia normal = im.Scale("images/chars/julia/julia_talking.png", 200, 200)
+image julia happy = im.Scale("images/chars/julia/julia_happy.png", 200, 200)
+image julia sad = im.Scale("images/chars/julia/julia_sad.png", 200, 200)
 
 # Fundos
 image math = "images/backgrounds/bg_math.jpg"
@@ -33,15 +43,15 @@ label start:
 
 label anas_dilemma:
     # Introdução à história principal
-    scene lib with fade
+    scene lib with fade:
+        zoom 2
     with dissolve
     narrator "Ana estava preocupada. Matemática e Ciências estavam puxadas, e as provas finais chegavam cada vez mais perto."
     narrator "Ela sabia que precisava melhorar suas notas, mas não sabia por onde começar."
     
     # Novo evento: Visita de Júlia
-    show ana normal at left
-    show julia normal at right
-    with fade
+    show ana inormal at left_above
+    show julia normal at center_above
     julia "Oi, Ana! Está ocupada?"
     ana "Oi, Júlia! Meio que sim... Estou tentando organizar meus estudos."
     julia "Tenho uma novidade incrível! Consegui ingressos para o show da Roberta Machado no fim de semana. São passes VIP com acesso ao backstage!"
@@ -56,13 +66,15 @@ label anas_dilemma:
 
 # Cena de aceitar o convite
 label accept_invitation:
-    scene event with fade
-    show ana happy at left
-    show julia happy at right
+    scene event with fade:
+        zoom 2
+    show ana ihappy at left_above
+    show julia happy at center_above
     ana "Uau! Isso é demais! Claro que vou!"
     "Ana decide ir ao evento com Júlia. Elas aproveitam o fim de semana inteiro, curtindo o show e as atividades."
-    scene lib with fade
-    show ana sad at left
+    scene lib with fade:
+        zoom 2
+    show ana isad at left_above
     narrator "Ao voltar para casa, Ana percebe que perdeu um tempo precioso para estudar. Suas notas acabam sofrendo com isso."
     narrator "Apesar de se divertir, ela sente que a escolha trouxe mais consequências do que esperava."
 
@@ -74,13 +86,15 @@ label accept_invitation:
 
 # Cena de recusar o convite
 label decline_invitation:
-    scene lib with fade
-    show ana sad at left
+    scene lib with fade:
+        zoom 2
+    show ana isad at left_above
     ana "Júlia, eu adoraria ir, mas tenho exames importantes chegando. Preciso focar nos estudos."
-    show julia normal at right
+    show julia normal at center_above
     julia "Ah, que pena... Mas entendo. Boa sorte com os estudos!"
-    scene lib with fade
-    show ana happy at left
+    scene lib with fade:
+        zoom 2
+    show ana ihappy at left_above
     narrator "Ana se dedica aos estudos durante o fim de semana. Embora sinta que perdeu uma chance de diversão, ela fica orgulhosa ao ver os resultados positivos nas provas."
 
     menu:

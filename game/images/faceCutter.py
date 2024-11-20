@@ -1,8 +1,10 @@
 from PIL import Image
 
 # Carregar a imagem (substitua o caminho pela localização do seu arquivo de imagem)
-img_path = 'game/images/chars/julia/julia_sad.png'
-img = Image.open(img_path)
+base_path = 'chars/michael/'
+input_image = f'{base_path}michael_vhappy.png'
+
+img = Image.open(input_image)
 
 # Dimensões da imagem
 img_width, img_height = img.size
@@ -27,6 +29,6 @@ for i in range(num_faces):
     face_images.append(face_img)
     
     # Salva o rosto como imagem separada
-    face_img.save(f'game/images/chars/julia/julia_{i + 1}.png')
+    face_img.save(f'{base_path}michael_{i + 1}.png')
 
 print("Rostos separados e salvos com sucesso!")
